@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:openbox_menu xmlns:ns0="http://openbox.org/3.4/menu">
+  <ns0:menu id="root-menu" label="Openbox 3">
+    <ns0:menu id="applications" label="Applications" execute="xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu" />
+    <ns0:separator />
+    <ns0:item label="Log Out">
+      <ns0:action name="Exit">
+        <ns0:prompt>yes</ns0:prompt>
+      </ns0:action>
+    </ns0:item>
+    <menu id="menu-6249525" label="Power Settings">
+      <item label="Shutdown">
+        <action name="Execute">
+          <execute>systemctl poweroff</execute>
+        </action>
+      </item>
+      <item label="Reboot">
+        <action name="Execute">
+          <execute>systemctl reboot</execute>
+        </action>
+      </item>
+      <item label="Sleep">
+        <action name="Execute">
+          <execute>systemctl suspend</execute>
+        </action>
+      </item>
+    </menu>
+  </ns0:menu>
+</ns0:openbox_menu>
